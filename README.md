@@ -1,5 +1,34 @@
-# invoice
+# Overview
 Console app that create invoice based on event feed
+
+1. Configurable via appsettings.json
+{
+  "PageSize" : 10,
+  "AfterEventId" : 0,
+  "MaxPageSize": 500, //DO NOT CHANGE THIS UNLESS YOU KNOW THE API MAX PAGE SIZE
+  "PollingIntervalInSeconds": 5,
+  "Serilog": {
+    "Using": [ "Serilog.Sinks.Console", "Serilog.Sinks.File" ],
+    "MinimumLevel": "Information",
+    "WriteTo": [
+      { "Name": "Console" },
+      {
+        "Name": "File",
+        "Args": { "path": "Logs/log.txt" }
+      }
+    ],
+    "Properties": {
+      "Application": "EventFeed"
+    }
+  }
+}
+2. Use serilog logging instead of microsoft.extension.logging so it could extend to 3rd party logging without code change. 
+3. Allow fallback to user input if feed-url is failing to response for 3 consecutive calls.
+4. Run without options will prompt user input.
+5. Will check for directory and url validity before start pooling.
+6. Use DI to inject services as singleton to main program.
+7. Include a minimal xunit unit test project
+8. Implement event based notification to invoice generation
 
 # Assumptions:
 1. Require dotnet 5.0 SDK
@@ -19,6 +48,6 @@ Console app that create invoice based on event feed
 
 This apps will take two parameters at startup:
 1. —-feed-url
-2. —-afterEventId
+2. —-invoice-dir
 
-Eg: EventFeed.exe —-feed-url=https://api.com —-invoice-dir C:\Users\abc
+Eg: dotnet run —-feed-url=https://my.api.mockaroo.com/events.json?key=fda01bf0 —-invoice-dir C:\Users\abc
