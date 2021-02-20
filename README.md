@@ -2,6 +2,7 @@
 Console app that create invoice based on event feed
 
 1. Configurable via appsettings.json
+```
 {
   "PageSize" : 10,
   "AfterEventId" : 0,
@@ -22,6 +23,7 @@ Console app that create invoice based on event feed
     }
   }
 }
+```
 2. Use serilog logging instead of microsoft.extension.logging so it could extend to 3rd party logging without code change. 
 3. Allow fallback to user input if feed-url is failing to response for 3 consecutive calls.
 4. Run without options will prompt user input.
