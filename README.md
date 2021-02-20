@@ -38,21 +38,21 @@ Console app that create invoice based on event feed
 # Assumptions:
 1. Server has dotnet 5.0 SDK installed.The zip file doesn't include exe or binary. Just build and run on your favourite env ~
 2. Invoice-dir is a network drive that has auto replication for backup and redundancy.
-3. Event Id is always increment by 1, and we can treat this number as the sequence of event creation, instead of using creation date.
+3. Event Id is always increment by 1. We can treat this number as the sequence of event creation.
 4. No need to manage docs versioning, storage has versioning capability / can always recreate from event API.
 5. Invoice_update always contains full detail, so no need to check for delta, directly replace current version.
 6. Invoice_create will be upsert. Assuming storage has versioning capability, no need to worry skip create if exists, just replace it and let storage do the versioning.
-7. Logs are safe to storage locally as it’s the same network drive with auto replication.
+7. Logs are safe to store locally as it has same network drive capability as invoice-dir.
 
 # Shortcuts:
 1. Use 3rd party libraries such as PdfShareCore, Serilog to speed up development process.
-2. Build unit test project structure but have not finished up the test.
+2. Build unit test project structure but have not fully covered test cases.
 
 # To improve
-1. Store afterEventId on a network storage, so a crash won’t mean restarting from 0.
-2. Make it compatible for multiple hosting.
-3. More invoice for option, eg: s3, ftp.
-4. Rearchitect to coordinate and work together with multiple instances to speed up processing.
+1. Store afterEventId on a network storage, so a crash won’t means restarting from 0.
+2. Add CI/CD to automatically test and deploy on every check in.
+3. More invoice-dir for option, eg: s3, ftp.
+4. Redesign to process simultaneously with multiple instances without double processing.
 5. Improve test scenarios and code coverage.
 6. Allow more command line options to override appsettings.json.
 7. Improve PDF formatting.
