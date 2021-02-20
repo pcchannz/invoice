@@ -2,12 +2,12 @@
 Console app that create invoice based on event feed
 
 # Assumptions:
-1. Will only run on Windows OS.
+1. Require dotnet 5.0 SDK
 2. Invoice-dir is a network drive that has auto replication for backup and redundancy.
 3. Event Id is always increment by 1, and we can treat this number as the sequence of event creation, instead of using creation date.
-4. No need to manage docs versioning, can always recreate from event API.
-5. Invoice_update always contains full details, so we don’t need to check for delta, and directly replace current version.
-6. Invoice_create will be upsert.
+4. No need to manage docs versioning, storage has versioning capability / can always recreate from event API.
+5. Invoice_update always contains full detail, so no need to check for delta, directly replace current version.
+6. Invoice_create will be upsert. Assuming storage has versioning capability, no need to worry skip create if exists, just replace it and let storage do the versioning.
 7. Logs are safe to storage locally as it’s the same network drive with auto replication.
 
 # To improve
