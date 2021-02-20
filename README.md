@@ -41,7 +41,7 @@ Console app that create invoice based on event feed
 3. Event Id is always increment by 1. Treat this number as time sequence for event creation.
 4. No need to manage docs versioning, storage has versioning capability / can always recreate from event API.
 5. Invoice_update always contains full detail, so no need to check for delta, directly replace current version.
-6. Invoice_create will be upsert. Assuming storage has versioning capability, no need to worry skip create if exists, just replace it and let storage do the versioning. May not be the right behaviour, otherwise put item into queue, eg: SQS, so we can re-process the failed record later.
+6. Invoice_create will be upsert. Assuming storage has versioning capability, no need to worry skip create if exists, replace and assume storage will do the versioning. May not be the right behaviour, otherwise put item into queue, eg: SQS, so we can re-process the failed record later.
 7. Logs are safe to store locally as it has same network drive capability as invoice-dir.
 
 # Shortcuts:
