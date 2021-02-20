@@ -65,4 +65,4 @@ This apps will take two parameters at startup:
 
 1. unzip EventFeed.zip
 2. cd EventFeed
-3. dotnet run —-feed-url=https://my.api.mockaroo.com/events.json?key=fda01bf0 —-invoice-dir C:\Users\abc
+3. dotnet run --feed-url=https://my.api.mockaroo.com/events.json?key=fda01bf0 --invoice-dir=C:\Users\abc
