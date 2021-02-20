@@ -1,5 +1,7 @@
-# Overview of design
+# Summary 
 Console app that create invoice based on event feed
+
+# Overview of design
 
 1. Configurable via appsettings.json
 ```
