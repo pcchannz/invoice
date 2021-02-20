@@ -63,6 +63,7 @@ Console app that create invoice based on event feed
 12. Revisit PDF library.
 13. Hook up with monitoring tools.
 14. Improve security handshake with API.
+15. Encapsulate it further by creating service that will verify configuration and start pooling, that will make Program.cs much cleaner.
 
 # To test
 This apps will take two parameters at startup:
