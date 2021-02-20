@@ -26,14 +26,14 @@ Console app that create invoice based on event feed
   }
 }
 ```
-2. Use Serilog instead of Microsoft for ease to switch between 3rd party logging without code change. 
-3. Automatically fallback to user input for new feed-url is the existing one failing to response for 3 consecutive calls.
+2. Using Serilog instead of Microsoft for ease of switching between 3rd party logging without code change. 
+3. Automatically fallback to user input for new feed-url if the existing one failing to response for 3 consecutive calls.
 4. Run without options will prompt user input.
-5. Will check for directory and url validity before start pooling.
-6. Use DI to inject services as singleton to main program.
-7. Include a minimal xunit unit test project
-8. Implement event based notification to invoice generation
-9. Test with a mockaroo API! https://my.api.mockaroo.com/events.json?key=fda01bf0
+5. Directory and url validation before start pooling.
+6. Using DI to inject services as singleton to main program.
+7. Including a minimal xunit unit test project
+8. Implemented with event based notification to invoice generation
+9. Tested with a mockaroo API! https://my.api.mockaroo.com/events.json?key=fda01bf0
 
 # Assumptions:
 1. Require dotnet 5.0 SDK
