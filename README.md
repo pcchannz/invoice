@@ -30,9 +30,9 @@ Console app that create invoice based on event feed
 3. Automatically fallback to user input for new feed-url if the existing one failing to response for 3 consecutive calls.
 4. Run without options will prompt user input.
 5. Directory and url validation before start pooling.
-6. Using DI to inject services as singleton to main program.
+6. Using singleton DI services to main program.
 7. Including a minimal xunit unit test project
-8. Implemented with event based notification to invoice generation
+8. Implemented event based notification to invoice generation
 9. Tested with a mockaroo API! https://my.api.mockaroo.com/events.json?key=fda01bf0
 
 # Assumptions:
