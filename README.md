@@ -58,6 +58,8 @@ Console app that create invoice based on event feed
 7. Improve PDF formatting.
 8. Create a mock server API instead of using mockaroo.
 9. Benchmark the efficiency.
+10. Try hook up with cloud services such as SQS and SNS.
+11. Logging to cloudwatch and add x-ray for each processing step.
 
 # To test
 This apps will take two parameters at startup:
