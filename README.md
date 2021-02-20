@@ -60,6 +60,7 @@ Console app that create invoice based on event feed
 9. Benchmark the efficiency.
 10. Try hook up with cloud services such as SQS and SNS.
 11. Logging to cloudwatch and add x-ray for each processing step.
+12. Revisit PDF library.
 
 # To test
 This apps will take two parameters at startup:
