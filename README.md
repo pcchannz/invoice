@@ -58,9 +58,11 @@ Console app that create invoice based on event feed
 7. Improve PDF formatting.
 8. Create a mock server API instead of using mockaroo.
 
-
+# To test
 This apps will take two parameters at startup:
-1. —-feed-url
-2. —-invoice-dir
+- —-feed-url
+- —-invoice-dir
 
-Eg: dotnet run —-feed-url=https://my.api.mockaroo.com/events.json?key=fda01bf0 —-invoice-dir C:\Users\abc
+1. unzip EventFeed.zip
+2. cd EventFeed
+3. dotnet run —-feed-url=https://my.api.mockaroo.com/events.json?key=fda01bf0 —-invoice-dir C:\Users\abc
