@@ -26,7 +26,7 @@ Console app that create invoice based on event feed
   }
 }
 ```
-2. Use Serilog instead of Microsoft for feasibility in switch between 3rd party logging without code change. 
+2. Use Serilog instead of Microsoft for ease to switch between 3rd party logging without code change. 
 3. Allow fallback to user input if feed-url is failing to response for 3 consecutive calls.
 4. Run without options will prompt user input.
 5. Will check for directory and url validity before start pooling.
