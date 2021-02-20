@@ -36,7 +36,7 @@ Console app that create invoice based on event feed
 9. Tested with a mockaroo API! https://my.api.mockaroo.com/events.json?key=fda01bf0
 
 # Assumptions:
-1. Server has dotnet 5.0 SDK installed.The zip file doesn't include exe or binary. Build and run on any environment~
+1. Server has dotnet 5.0 SDK installed.The zip file doesn't include exe or binary. Just build and run on your favourite env ~
 2. Invoice-dir is a network drive that has auto replication for backup and redundancy.
 3. Event Id is always increment by 1, and we can treat this number as the sequence of event creation, instead of using creation date.
 4. No need to manage docs versioning, storage has versioning capability / can always recreate from event API.
