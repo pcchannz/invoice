@@ -31,6 +31,7 @@ Console app that create invoice based on event feed
 6. Use DI to inject services as singleton to main program.
 7. Include a minimal xunit unit test project
 8. Implement event based notification to invoice generation
+9. Test with a mockaroo API! https://my.api.mockaroo.com/events.json?key=fda01bf0
 
 # Assumptions:
 1. Require dotnet 5.0 SDK
