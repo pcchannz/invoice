@@ -50,14 +50,14 @@ Console app that create invoice based on event feed
 
 # To improve
 1. Store afterEventId on a network storage, so a crash won’t means restarting from 0.
-2. Add CI/CD to automatically test and deploy on every check in.
-3. More invoice-dir for option, eg: s3, ftp.
-4. Redesign to process simultaneously with multiple instances without double processing.
+2. Configure CI/CD to automatically test and deploy.
+3. Support more types of invoice-dir such as s3, ftp.
+4. Redesign to process simultaneously across multiple instances without double processing to support horizontal scaling
 5. Improve test scenarios and code coverage.
 6. Allow more command line options to override appsettings.json.
 7. Improve PDF formatting.
 8. Create a mock server API instead of using mockaroo.
-9. Benchmark the efficiency
+9. Benchmark the efficiency.
 
 # To test
 This apps will take two parameters at startup:
