@@ -60,8 +60,8 @@ Console app that create invoice based on event feed
 
 # To test
 This apps will take two parameters at startup:
-- —-feed-url
-- —-invoice-dir
+- --feed-url
+- --invoice-dir
 
 1. unzip EventFeed.zip
 2. cd EventFeed
