@@ -62,6 +62,7 @@ Console app that create invoice based on event feed
 11. Logging to cloudwatch and add x-ray for each processing step.
 12. Revisit PDF library.
 13. Hook up with monitoring tools.
+14. Improve security handshake with API.
 
 # To test
 This apps will take two parameters at startup:
